@@ -2,6 +2,7 @@
 
 using Calculators;
 using Calculators.Implementations.Bad;
+using Calculators.Implementations.Bad2;
 using Calculators.Implementations.Good;
 
 internal class Program
@@ -10,6 +11,7 @@ internal class Program
     {
         Calculator goodCalculator = new(new GoodAdd(), new GoodSubtract(), new GoodMultiply(), new GoodDivide());
         Calculator badCalculator = new(new BadAdd(), new BadSubtract(), new BadMultiply(), new BadDivide());
+        Calculator bad2Calculator = new(new Bad2Add(), new Bad2Subtract(), new Bad2Multiply(), new Bad2Divide());
         Console.WriteLine("Welcome to the best calculator in the world! *(v0.0.1-alpha)");
 
         while (true)
@@ -43,6 +45,9 @@ internal class Program
                     break;
                 case "bad":
                     calculator = badCalculator;
+                    break;
+                case "bad2":
+                    calculator = bad2Calculator;
                     break;
                 default:
                     Console.WriteLine("Unknown calculator choice. Try again!");
