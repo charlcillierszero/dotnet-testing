@@ -11,7 +11,7 @@ public class BadDivide : IDivide
 
         long remainder = x;
         List<long> longs = new List<long>();
-        while (remainder > y)
+        while (remainder >= y)
         {
             longs.Add(1);
             remainder -= y;
